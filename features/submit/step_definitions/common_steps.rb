@@ -1,4 +1,4 @@
-Given("I am on the Submit Page") do
+Given("I am on the Root Page") do
 end
 
 When("I login I should be on the Home Page") do
