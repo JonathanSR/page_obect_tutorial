@@ -14,12 +14,44 @@ We are going to explore the Page Object Model Pattern by creating a feature test
 
 ### What is it?
 * The page object model is a test automation patttern that aims to create an abstraction of your site's user interface that can be used in tests.
-* A page object wraps the HTML page, or a section with an application-specific API, allowing you to manipulate page elements without digging around in the HTML, within block anyone?
+* A page object wraps the HTML page, or a section with an application-specific API, allowing you to manipulate page elements without digging around in the HTML. Within block anyone?
+
+### Page Object with Site Prism
+* Site prism provides a simple DSL for describing your site using Page Objects in conjunction with Capybara.
+* Site Prism allows us to model pages, sections, elements, collection of elements etc. We will cover the four that were just mentioned.
+
+#### Pages
+* Pages are the central block of the Page Object Model. 'https://google.com' is a page.
+```shell
+class Home < SitePrism::Page
+end
+```
+
+#### Sections
+* A Section is a part of a page that either contains complex objects or appears in multiple pages. 
+* A Navbar and a Search Form are examples of a section.
+```shell
+class SearchForm < SitePrism::Section
+end
+```
+
+#### Elements
+* An element is a text field, button, box, image etc. A singular item that appears on your page.
+```shell
+element :search_box, '.search-box'
+```
+#### Collection of Elements
+* A collection of elements is a collection of similar elements. Think a grid with agents.
+```shell
+elements :agents, '.grid-box.box'
+```
 
 ### Getting Started
 For this tutorial we are going to clone down a repo that has the skeleton setup for our page object implementation. 
 ```shell
-$ git clone 
+$ git clone git@github.com:JonathanSR/page_obect_tutorial.git
+$ cd page_object_tutorial
+$ bundle
 ```
 
 ### Takeaways

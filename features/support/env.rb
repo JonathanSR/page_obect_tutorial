@@ -4,6 +4,7 @@ require 'rspec'
 require 'selenium-webdriver'
 require_relative '../../page_objects/all_page_objects'
 require 'pry'
+require 'site_prism'
 
 Capybara.register_driver :selenium do |app|
   caps = Selenium::WebDriver::Remote::Capabilities.chrome('chromeOptions' => {'args' => ['--start-maximized'] })

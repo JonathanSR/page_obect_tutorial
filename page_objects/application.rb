@@ -5,7 +5,7 @@ class Application
      @pages = {}
   end
 
-  def home
-    @pages[:home] ||= HomePage.new
+  def submit
+    @pages[:submit] ||= SubmitPage.new
   end
 end
