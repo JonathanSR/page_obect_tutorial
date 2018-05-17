@@ -9,7 +9,7 @@ class RootPage < SitePrism::Page
   #Take two arguments, name and locator
   element :sign_in, "#sign_in"
   element :input_name, "input[type='email']"
-  element :next_button, "identifierNext"
+  element :next_button, "#identifierNext"
   element :input_password, "input[type='password']"
   element :password_next_button, "#passwordNext"
 end
